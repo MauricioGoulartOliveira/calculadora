@@ -1,30 +1,69 @@
 body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  padding: 0 16px;
+}
+
+header .logo {
+  height: 45px;
+}
+
+header .links {
+  display: flex;
   align-items: center;
 }
 
-.calculadora {
+header .links nav + nav {
+  margin-left: 16px;
+}
+
+main {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main #section-calculadora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main #section-calculadora .calculadora {
   padding: 32px 16px;
   border: 1px solid black;
   border-radius: 6px;
 }
 
-#display-info {
+main #section-calculadora .calculadora .display #display-info {
   background-color: darkslategray;
+  color: white;
+  width: 165px;
+  height: 25px;
+  display: block;
 }
 
-.teclado {
+main #section-calculadora .calculadora .teclado {
   margin-top: 16px;
 }
 
-.linha {
+main #section-calculadora .calculadora .teclado .linha {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-.linha + .linha {
+main #section-calculadora .calculadora .teclado .linha + .linha {
   margin-top: 8px;
 }
 
@@ -36,18 +75,38 @@ button {
   border-radius: 4px;
 }
 
-.numerico {
+button:hover {
+  scale: 1.2;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+main #section-calculadora .calculadora .teclado .linha .numerico {
   background-color: lightcyan;
 }
 
-.operador {
+main #section-calculadora .calculadora .teclado .linha .operador {
   background-color: lightblue;
 }
 
-.acao {
+main #section-calculadora .calculadora .teclado .linha .acao {
   background-color: lightgreen;
 }
-.logo{
-   margin-left: 50px;
 
+main #section-historico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main #section-historico button {
+  margin-top: 16px;
+  width: fit-content;
+  height: fit-content;
+}
+
+footer {
+  height: 35px;
+  background-color: lightsteelblue;
 }

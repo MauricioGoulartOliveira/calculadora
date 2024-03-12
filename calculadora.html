@@ -1,59 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-  </head>
-
-  <body>
-    <header>
-      <figure >
-        <img src="calculadora.png" alt="logo" />
-      </figure>
-    </header>
-    <main>
-    <!-- cALCULADORA -->
-      <section>
-        <div class="calculadora">
-          <!-- Display -->
-          <div class="display">
-            <input id="display-info" type="text" disabled="true" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <header>
+    <figure>
+      <img class="logo" src="calculadora.png" alt="" srcset="">
+    </figure>
+    <div class="links">
+      <nav>
+        <a href="">Texto 1</a>
+      </nav>
+      <nav>
+        <a href="">Texto 2</a>
+      </nav>
+      <nav>
+        <a href="">Texto 3</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- CALCULADORA -->
+    <section id="section-calculadora">
+      <div class="calculadora">
+        <!-- Display -->
+        <div class="display">
+          <!-- <input id="display-info" type="text"> -->
+          <span id="display-info"></span>
+        </div>
+        <!-- Teclado -->
+        <div class="teclado">
+          <div class="linha">
+            <button onclick="agregarDisplay('7')" class="numerico">7</button>
+            <button onclick="agregarDisplay('8')" class="numerico">8</button>
+            <button onclick="agregarDisplay('9')" class="numerico">9</button>
+            <button onclick="agregarDisplay('/')" class="operador">/</button>
           </div>
-          <!-- Teclado -->
-          <div class="teclado">
-            <div class="linha">
-              <button class="numerico">7</button>
-              <button class="numerico">8</button>
-              <button class="numerico">9</button>
-              <button class="operador">/</button>
-            </div>
-            <div class="linha">
-              <button class="numerico">4</button>
-              <button class="numerico">5</button>
-              <button class="numerico">6</button>
-              <button class="operador">X</button>
-            </div>
-            <div class="linha">
-              <button class="numerico">3</button>
-              <button class="numerico">2</button>
-              <button class="numerico">1</button>
-              <button class="operador">+</button>
-            </div>
-            <div class="linha">
-              <button class="acao">C</button>
-              <button class="numerico">0</button>
-              <button class="acao">=</button>
-              <button class="operador">-</button>
-            </div>
+          <div class="linha">
+            <button onclick="agregarDisplay('4')" class="numerico">4</button>
+            <button onclick="agregarDisplay('5')" class="numerico">5</button>
+            <button onclick="agregarDisplay('6')" class="numerico">6</button>
+            <button onclick="agregarDisplay('*')" class="operador">X</button>
+          </div>
+          <div class="linha">
+            <button onclick="agregarDisplay('3')" class="numerico">3</button>
+            <button onclick="agregarDisplay('2')" class="numerico">2</button>
+            <button onclick="agregarDisplay('1')" class="numerico">1</button>
+            <button onclick="agregarDisplay('+')" class="operador">+</button>
+          </div>
+          <div class="linha">
+            <button onclick="limpar()" class="acao">C</button>
+            <button onclick="agregarDisplay('0')" class="numerico">0</button>
+            <button onclick="calcularOperacao()" class="acao">=</button>
+            <button onclick="agregarDisplay('-')" class="operador">-</button>
           </div>
         </div>
-      </section>
-    </main>
-  </body>
+      </div>
+    </section>
+
+    <!-- HISTORICO -->
+    <section id="section-historico">
+      <div>
+        <button onclick="mostrarHistorico()">Mostrar Histórico</button>
+        <button onclick="limparHistorico()">Limpar Histórico</button>
+      </div>
+      <ul id="lista-historico"></ul>
+    </section>
+  </main>
   <footer>
-    <h1>calculadora feita por Mauricio oliveira</h1>
   </footer>
+</body>
 </html>
